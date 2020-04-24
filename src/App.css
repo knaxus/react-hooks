@@ -4,45 +4,55 @@
 }
 .app {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: flex-end;
   margin-top: 30px;
 }
 .header {
   font-size: 15px;
-  width: 20%;
-  font-weight: 100;
   color: #6d0c74;
-  padding-left: 10px;
+  margin-left: 7%;
+  width: 100%;
+
+}
+h1 {
+  box-shadow: 10px 7px 9px #6d0c74;
+  width: 17%;
+  padding: 10px;
+  border: 1px solid;
 }
 input {
-  width: 45%;
+  width: 35%;
+  padding-left: 5px;
   height: 40px;
-  border: 2px solid #6d0c74;
-  font-size: 30px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0px 2px 6px #00000029;
-
+  border: 1px solid #6d0c74;
+  font-size: 20px;
+  font-weight: 100;
+  box-shadow: 10px 8px 6px #00000029;
 }
 
 .container {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  margin-left: 7%;
+  margin-top: 2%;
 }
 .btn {
-  border-radius: 10px;
-  background-color: #AB4477;
+  background-color: white;
   border: none;
-  color: #FFFFFF;
+  color: #6d0c74;
   text-align: center;
-  font-size: 28px;
+  font-size: 25px;
   /* padding: 10px; */
-  width: 200px;
+  width: 150px;
   transition: all 0.5s;
   cursor: pointer;
+  margin-left: 50px;
+  border: 1px solid black;
+  box-shadow: 10px 7px 9px #6d0c74;
+  font-weight: bold;
+
 }
 
 .btn span {
@@ -72,24 +82,70 @@ input {
 
 .news-holder {
   display: flex;
-  justify-content: center;
 }
 
 .news-holder ul {
   margin-right: 13%;
+  width: 100%;
+  margin-left: 10px;
+
 }
 
 .news-holder ul  li {
   list-style-type: none;
   border: 1px solid;
-  height: 59px;
-  text-align: center;
-  border-radius: 5px;
+  height: 30px;
   margin-bottom: 10px;
-  padding-top: 30px;
+  padding-top: 20px;
+  color: #AB4477;
+  padding-left: 8px;
+  box-shadow: 10px 8px 6px #00000029;
+
 }
 
 .news-holder ul li a {
   text-decoration: none;
+  color: #6d0c74
 }
 
+.error {
+  color: red;
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 4%;
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  background: #ffffff;
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #6d0c74;
+  width: 80px;
+  height: 80px;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

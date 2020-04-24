@@ -50,7 +50,7 @@ function App() {
 <div className="main-container">
 <div className="app">
       <div className="header">
-        <h1>Hacker News</h1>
+        <h1>HACKER NEWS</h1>
       </div>
     <div className="container">
       <input
@@ -65,13 +65,13 @@ function App() {
       <button
         className="btn"
         onClick={async () => await callAPI()}
-      ><span>Search</span></button>
+      ><span>SEARCH</span></button>
     </div>
       <br />
 </div>
       <div className="news-holder">
         {
-          loading && !err ? 'Loading...' :
+          loading && !err ? <div className="loader"></div> :
             (
               <ul>
                 {
@@ -86,14 +86,14 @@ function App() {
               </ul>
             )
         }
+      </div>
 
         {
           err && (
-            <p style={{ color: 'red ' }}>{err}</p>
+            <div class="error">{err}</div>
           )
         }
 
-      </div>
     </div>
   );
 }
