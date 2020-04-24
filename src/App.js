@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
+import './App.css';
 
 const API = 'http://hn.algolia.com/api/v1/search?query=';
 
@@ -46,20 +47,21 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="app">
       <h1>Hacker News</h1>
-      <input
-        type="text"
-        placeholder={"search here"}
-        value={search}
-        onChange={handleSearch}
-        onKeyDown={handleKeyDown}
-        ref={searchInputRef}
-      />
+        <input
+          type="text"
+          placeholder={"search here"}
+          value={search}
+          onChange={handleSearch}
+          onKeyDown={handleKeyDown}
+          ref={searchInputRef}
+        />
 
       <button
+        className="btn"
         onClick={async () => await callAPI()}
-      >Search</button>
+      ><span>Search</span></button>
       <br />
       <div className="news-holder">
         {
