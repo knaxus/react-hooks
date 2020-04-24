@@ -3,7 +3,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import './App.css';
 
-const API = 'http://hn.algolia.com/api/v1/search?query=';
+// const API = 'http://hn.algolia.com/api/v1/search?query=';
+const API ='';
 
 function App() {
   const [results, setResults] = useState([]);

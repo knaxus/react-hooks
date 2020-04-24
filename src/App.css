@@ -18,9 +18,9 @@
 }
 h1 {
   box-shadow: 10px 7px 9px #6d0c74;
-  width: 17%;
   padding: 10px;
-  border: 1px solid;
+  border: 1px solid #AB4477;
+  width: 238px;
 }
 input {
   width: 35%;
@@ -29,7 +29,8 @@ input {
   border: 1px solid #6d0c74;
   font-size: 20px;
   font-weight: 100;
-  box-shadow: 10px 8px 6px #00000029;
+  box-shadow: 10px 7px 9px #6d0c74;
+
 }
 
 .container {
@@ -49,7 +50,7 @@ input {
   transition: all 0.5s;
   cursor: pointer;
   margin-left: 50px;
-  border: 1px solid black;
+  border: 1px solid #AB4477;
   box-shadow: 10px 7px 9px #6d0c74;
   font-weight: bold;
 
@@ -94,7 +95,7 @@ input {
 .news-holder ul  li {
   list-style-type: none;
   border: 1px solid;
-  height: 30px;
+  min-height: 30px;
   margin-bottom: 10px;
   padding-top: 20px;
   color: #AB4477;
@@ -110,11 +111,15 @@ input {
 
 .error {
   color: red;
+  width: 70%;
   font-size: 20px;
   font-weight: 500;
   display: flex;
   justify-content: flex-start;
-  margin-left: 4%;
+  border: 1px solid #AB4477;
+  box-shadow: 10px 7px 9px #6d0c74;
+  padding: 10px;
+  margin-left: 48px;
 }
 
 .loader,
