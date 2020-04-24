@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
+import './App.css';
 
 const API = 'http://hn.algolia.com/api/v1/search?query=';
 
@@ -46,24 +47,31 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <h1>Hacker News</h1>
+<div className="main-container">
+<div className="app">
+      <div className="header">
+        <h1>HACKER NEWS</h1>
+      </div>
+    <div className="container">
       <input
-        type="text"
-        placeholder={"search here"}
-        value={search}
-        onChange={handleSearch}
-        onKeyDown={handleKeyDown}
-        ref={searchInputRef}
-      />
+            type="text"
+            placeholder={"search here"}
+            value={search}
+            onChange={handleSearch}
+            onKeyDown={handleKeyDown}
+            ref={searchInputRef}
+          />
 
       <button
+        className="btn"
         onClick={async () => await callAPI()}
-      >Search</button>
+      ><span>SEARCH</span></button>
+    </div>
       <br />
+</div>
       <div className="news-holder">
         {
-          loading && !err ? 'Loading...' :
+          loading && !err ? <div className="loader"></div> :
             (
               <ul>
                 {
@@ -78,14 +86,14 @@ function App() {
               </ul>
             )
         }
+      </div>
 
         {
           err && (
-            <p style={{ color: 'red ' }}>{err}</p>
+            <div class="error">{err}</div>
           )
         }
 
-      </div>
     </div>
   );
 }
