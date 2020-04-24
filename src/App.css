@@ -1,26 +1,37 @@
-.app {
+.main-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
-h1 {
-  font-size: 50px;
+.app {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+.header {
+  font-size: 15px;
+  width: 20%;
   font-weight: 100;
   color: #6d0c74;
-  margin-top: 10%;
+  padding-left: 10px;
 }
 input {
-  width: 30%;
-  height: 72px;
+  width: 45%;
+  height: 40px;
   border: 2px solid #6d0c74;
   font-size: 30px;
   border-radius: 10px;
   text-align: center;
   box-shadow: 0px 2px 6px #00000029;
-  margin-top: 5%;
 
 }
 
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
 .btn {
   border-radius: 10px;
   background-color: #AB4477;
@@ -28,11 +39,10 @@ input {
   color: #FFFFFF;
   text-align: center;
   font-size: 28px;
-  padding: 20px;
-  width: 300px;
+  /* padding: 10px; */
+  width: 200px;
   transition: all 0.5s;
   cursor: pointer;
-  margin-top: 5%;
 }
 
 .btn span {
@@ -59,3 +69,27 @@ input {
   opacity: 1;
   right: 0;
 }
+
+.news-holder {
+  display: flex;
+  justify-content: center;
+}
+
+.news-holder ul {
+  margin-right: 13%;
+}
+
+.news-holder ul  li {
+  list-style-type: none;
+  border: 1px solid;
+  height: 59px;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding-top: 30px;
+}
+
+.news-holder ul li a {
+  text-decoration: none;
+}
+

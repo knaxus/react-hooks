@@ -47,22 +47,28 @@ function App() {
   }
 
   return (
-    <div className="app">
-      <h1>Hacker News</h1>
-        <input
-          type="text"
-          placeholder={"search here"}
-          value={search}
-          onChange={handleSearch}
-          onKeyDown={handleKeyDown}
-          ref={searchInputRef}
-        />
+<div className="main-container">
+<div className="app">
+      <div className="header">
+        <h1>Hacker News</h1>
+      </div>
+    <div className="container">
+      <input
+            type="text"
+            placeholder={"search here"}
+            value={search}
+            onChange={handleSearch}
+            onKeyDown={handleKeyDown}
+            ref={searchInputRef}
+          />
 
       <button
         className="btn"
         onClick={async () => await callAPI()}
       ><span>Search</span></button>
+    </div>
       <br />
+</div>
       <div className="news-holder">
         {
           loading && !err ? 'Loading...' :
