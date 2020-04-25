@@ -2,8 +2,17 @@
 
 Trying out **react hooks** using Hacker News open API
 
+## Screen
+
+
+Thanks [TheJSGirl](https://github.com/thejsgirl) for the UI improvements.
+
+### Initial Build
+
 ![Screenshot](_/screen.png)
 
-## Todo
+### How to Use
 
-- [ ] Styling
+- Clone this repo
+- `npm i`
+- `npm start`

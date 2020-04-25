@@ -106,13 +106,23 @@ input {
   color: #AB4477;
   padding-left: 8px;
   box-shadow: 10px 8px 6px #00000029;
-
 }
 
 .news-holder ul li a {
   text-decoration: none;
-  color: #6d0c74
+  color: #6d0c74;
+  font-size: 20px;
 }
+
+.news-holder ul  li:hover {
+  color: black;
+}
+
+.news-holder ul li a:hover {
+  text-decoration: none;
+  color: black;
+}
+
 
 .error {
   color: red;

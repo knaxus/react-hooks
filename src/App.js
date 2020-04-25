@@ -33,11 +33,6 @@ function App() {
 
   const handleSearch = async (e) => {
     setSearch(e.target.value);
-
-    if (e.keyCode === 13) {
-      console.log('Enter pressed');
-      await callAPI();
-    }
   }
 
   const handleKeyDown = async (e) => {
@@ -47,13 +42,13 @@ function App() {
   }
 
   return (
-<div className="main-container">
-<div className="app">
-      <div className="header">
-        <h1>HACKER NEWS</h1>
-      </div>
-    <div className="container">
-      <input
+    <div className="main-container">
+      <div className="app">
+        <div className="header">
+          <h1>HACKER NEWS</h1>
+        </div>
+        <div className="container">
+          <input
             type="text"
             placeholder={"search here"}
             value={search}
@@ -62,13 +57,13 @@ function App() {
             ref={searchInputRef}
           />
 
-      <button
-        className="btn"
-        onClick={async () => await callAPI()}
-      ><span>SEARCH</span></button>
-    </div>
-      <br />
-</div>
+          <button
+            className="btn"
+            onClick={async () => await callAPI()}
+          ><span>SEARCH</span></button>
+        </div>
+        <br />
+      </div>
       <div className="news-holder">
         {
           loading && !err ? <div class="lds-loader"><div></div><div></div><div></div></div> :
@@ -88,11 +83,11 @@ function App() {
         }
       </div>
 
-        {
-          err && (
-            <div class="error">{err}</div>
-          )
-        }
+      {
+        err && (
+          <div class="error">{err}</div>
+        )
+      }
 
     </div>
   );
