@@ -50,7 +50,6 @@ input {
   color: #6d0c74;
   text-align: center;
   font-size: 25px;
-  /* padding: 10px; */
   width: 150px;
   transition: all 0.5s;
   cursor: pointer;
@@ -69,11 +68,9 @@ input {
 }
 
 .btn span:after {
-  content: '\00bb';
-  position: absolute;
   opacity: 0;
   top: 0;
-  right: -20px;
+  right: -20px; 
   transition: 0.5s;
 }
 
@@ -168,35 +165,108 @@ input {
 }
 
 
-.loader,
-.loader:before,
-.loader:after {
-  background: #ffffff;
-  -webkit-animation: load1 1s infinite ease-in-out;
-  animation: load1 1s infinite ease-in-out;
-  width: 1em;
-  height: 4em;
+@media (max-width: 400px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    font-size: 12px;
+  }
+  h1 {
+    text-align: center;
+  }
+  .container {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn {
+    margin-left: 0;
+    font-size: 14px;
+    width: 48%;
+    margin-top: 12px;
+    height: 45px;
+  }
+  input {
+    font-size: 14px;
+    width: 78%;
+  }
+  .news-holder ul {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+  }
 }
-.loader {
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #6d0c74;
-  width: 80px;
-  height: 80px;
-  margin-top: 10%;
-  margin-left: auto;
-  margin-right: auto;
-  -webkit-animation: spin 2s linear infinite; /* Safari */
-  animation: spin 2s linear infinite;
+@media (min-width: 401px) and (max-width: 800px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    font-size: 12px;
+  }
+  h1 {
+    text-align: center;
+  }
+  .container {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn {
+    margin-left: 0;
+    font-size: 14px;
+    width: 48%;
+    margin-top: 12px;
+    height: 45px;
+  }
+  input {
+    font-size: 14px;
+    width: 78%;
+  }
+  .news-holder ul {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+  }
 }
-
-/* Safari */
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+@media (min-width: 801px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    font-size: 12px;
+  }
+  h1 {
+    text-align: center;
+  }
+  .container {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn {
+    margin-left: 0;
+    font-size: 14px;
+    width: 48%;
+    margin-top: 12px;
+    height: 45px;
+  }
+  input {
+    font-size: 14px;
+    width: 78%;
+  }
+  .news-holder ul {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+  }
 }
