@@ -71,7 +71,7 @@ function App() {
 </div>
       <div className="news-holder">
         {
-          loading && !err ? <div className="loader"></div> :
+          loading && !err ? <div class="lds-loader"><div></div><div></div><div></div></div> :
             (
               <ul>
                 {
