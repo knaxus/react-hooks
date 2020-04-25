@@ -91,7 +91,10 @@ input {
   margin-right: 13%;
   width: 100%;
   margin-left: 10px;
+}
 
+.news-holder ul li:hover {
+  transform: scale(1.02);
 }
 
 .news-holder ul  li {
@@ -201,41 +204,6 @@ input {
   }
 }
 @media (min-width: 401px) and (max-width: 800px) {
-  .header {
-    display: flex;
-    justify-content: center;
-    margin-left: 0;
-    font-size: 12px;
-  }
-  h1 {
-    text-align: center;
-  }
-  .container {
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .btn {
-    margin-left: 0;
-    font-size: 14px;
-    width: 48%;
-    margin-top: 12px;
-    height: 45px;
-  }
-  input {
-    font-size: 14px;
-    width: 78%;
-  }
-  .news-holder ul {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5%;
-  }
-}
-@media (min-width: 801px) {
   .header {
     display: flex;
     justify-content: center;
