@@ -2,12 +2,12 @@
 
 Trying out **react hooks** using Hacker News open API
 
-## Screen
-
+![screen](_/news.gif)
 
 Thanks [TheJSGirl](https://github.com/thejsgirl) for the UI improvements.
 
-### Initial Build
+
+### Initial Screen
 
 ![Screenshot](_/screen.png)
 
