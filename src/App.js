@@ -1,7 +1,20 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useCallback , useRef } from 'react';
 import axios from 'axios';
 import './App.css';
+
+
+const debounce = (callback, delay = 250) => {
+  let timeoutId
+  return (...args) => {
+    clearTimeout(timeoutId)
+    timeoutId = setTimeout(() => {
+      timeoutId = null
+      callback(...args)
+    }, delay)
+  }
+}
+
 
 const API = 'http://hn.algolia.com/api/v1/search?query=';
 
@@ -11,19 +24,22 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [err, setErr] = useState('');
   const searchInputRef = useRef();
+  const debouncecallAPI = useCallback(debounce(async (searchStr) => {
+    callAPI(searchStr);
+  }, 1000), [])
 
   useEffect(() => {
-    callAPI();
-  }, []);
+    let searchStr = search;
+    debouncecallAPI(searchStr);
+  }, [search]);
 
-  const callAPI = async () => {
+  const callAPI = async (search) => {
     if (search) {
       try {
         setLoading(true);
         const res = await axios.get(`${API}${search}`);
         setResults(res.data.hits);
         setLoading(false);
-        setSearch('');
         searchInputRef.current.focus();
       } catch (err) {
         setErr(err.message);
@@ -32,12 +48,12 @@ function App() {
   }
 
   const handleSearch = async (e) => {
-    setSearch(e.target.value);
+    setSearch(e.target.value)
   }
 
   const handleKeyDown = async (e) => {
     if (e.keyCode === 13) {
-      await callAPI();
+      await callAPI(search);
     }
   }
 
