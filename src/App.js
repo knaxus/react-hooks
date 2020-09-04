@@ -53,7 +53,7 @@ function App() {
 
   const handleKeyDown = async (e) => {
     if (e.keyCode === 13) {
-      await callAPI();
+      await callAPI(search);
     }
   }
 
